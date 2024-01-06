@@ -1,4 +1,4 @@
-module Plotting
+module Figures
 
 using .Main: @showp, @showc, near_eq
 
@@ -6,7 +6,7 @@ using Serialization
 using Plots
 
 function main()
-    mkpath("plots")
+    mkpath("figures")
     default_fig_width, default_fig_height = (600, 400)
     figsize = (default_fig_width - 100, default_fig_height)
 
@@ -17,12 +17,12 @@ function main()
         label=nothing,
         xlabel="x",
         ylabel="y",
-        title="A Line (woohoo!)",
+        title="A Line (yay!)",
         dpi=300,
         linewidth=2,
         size=figsize
     )
-    savefig("plots/line.pdf")
+    savefig("figures/line.pdf")
 
     parabola = deserialize("data/parabola.dat")
     p = plot(
@@ -36,7 +36,7 @@ function main()
         linewidth=2,
         size=figsize
     )
-    savefig("plots/parabola.pdf")
+    savefig("figures/parabola.pdf")
 
     return nothing
 end

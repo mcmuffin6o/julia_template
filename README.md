@@ -4,7 +4,7 @@
 The simplest approach to producing and plotting the data is to run
 ```julia
 include("src/solution.jl"); Solution.main();
-include("src/plotting.jl"); Plotting.main();
+include("src/figures.jl"); Figures.main();
 ```
 from the Julia REPL. The data and plots should show up in the `data` and `plots` directories, respectively.
 
